@@ -1,33 +1,35 @@
 
-  
-    <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>hexo-basic | zgpeace [易筋修行]</title>
+    <title>Xcode Build Settings中的Architecture概述 | zgpeace [易筋修行]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zgpeace">
     
 
     
-    <meta name="description" content="学习搭建 hexo参考如下：hexo你的博客使用Github搭建静态博客（Hexo）hexo 官网Hexo使用多说教程
-problem:$hexo –version
-{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }{ [Error: Cannot fin">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hexo-basic">
-<meta property="og:url" content="https://zgpeace.github.io/hexo-basic.html">
+    <meta name="description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
+ 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
+
+查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xcode Build Settings中的Architecture概述">
+<meta property="og:url" content="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/index.html">
 <meta property="og:site_name" content="zgpeace [易筋修行]">
-<meta property="og:description" content="学习搭建 hexo参考如下：hexo你的博客使用Github搭建静态博客（Hexo）hexo 官网Hexo使用多说教程
-problem:$hexo –version
-{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }{ [Error: Cannot fin">
-<meta property="og:updated_time" content="2015-10-25T02:54:25.000Z">
+<meta property="og:description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
+ 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
+
+查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
+<meta property="og:updated_time" content="2015-10-26T07:26:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo-basic">
-<meta name="twitter:description" content="学习搭建 hexo参考如下：hexo你的博客使用Github搭建静态博客（Hexo）hexo 官网Hexo使用多说教程
-problem:$hexo –version
-{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }{ [Error: Cannot fin">
+<meta name="twitter:title" content="Xcode Build Settings中的Architecture概述">
+<meta name="twitter:description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
+ 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
+
+查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
 
     
     <link rel="alternative" href="/atom.xml" title="zgpeace [易筋修行]" type="application/atom+xml">
@@ -42,9 +44,9 @@ problem:$hexo –version
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-      <body>
-        <header>
-          
+  <body>
+    <header>
+      
 <div>
 		
 			<div id="imglogo">
@@ -79,40 +81,38 @@ problem:$hexo –version
 				</ul>
 			</nav>			
 </div>
-        </header>
-        <div id="container">
-          <div id="main" class="page" itemscope itemprop="blogPost">
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/hexo-basic.html" title="hexo-basic" itemprop="url">hexo-basic</a>
+      <a href="/2015/10/26/xcode-build-setting-architecture/" title="Xcode Build Settings中的Architecture概述" itemprop="url">Xcode Build Settings中的Architecture概述</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-25T02:52:09.000Z" itemprop="datePublished"> 发表于 2015-10-25</time>
+    <time datetime="2015-10-26T07:21:22.000Z" itemprop="datePublished"> 发表于 2015-10-26</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<p>学习搭建 hexo<br>参考如下：<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">使用Github搭建静态博客（Hexo）</a><br><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo 官网</a><br><a href="http://dev.duoshuo.com/threads/541d3b2b40b5abcd2e4df0e9" target="_blank" rel="external">Hexo使用多说教程</a></p>
-<p>problem:<br>$hexo –version</p>
-<p>{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }<br>{ [Error: Cannot find module ‘./build/default/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }<br>{ [Error: Cannot find module ‘./build/Debug/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }</p>
-<p>solution:<br>$ npm install hexo –no-optional</p>
-<p>$ hexo –version<br>hexo: 3.1.1<br>os: Darwin 15.0.0 darwin x64<br>http_parser: 2.5.0<br>node: 4.2.1<br>v8: 4.5.103.35<br>uv: 1.7.5<br>zlib: 1.2.8<br>ares: 1.10.1-DEV<br>icu: 56.1<br>modules: 46<br>openssl: 1.0.2d</p>
-<p>problem:<br>用hexo搭了个blog，之前一直正常，最近在deploy的时候无法连接到github了。<br>fatal: unable to access ‘<a href="https://github.com/xxxxx’" target="_blank" rel="external">https://github.com/xxxxx’</a>: Empty reply from server.<br>请问这是怎么回事</p>
-<p>solve:<br>翻墙即可</p>
-<p>problem：<br>$hexo deploy<br>ERROR Deployer not found: github</p>
-<p>The solution:<br>1: type change git<br>2: command npm install hexo-deployer-git –save<br>3: hexo d</p>
-<p>it works</p>
-<p>Mac 显示或者隐藏 隐藏的文件<br>在Terminal中复制或输入以下命令(区分大小写)：</p>
-<p>defaults write com.apple.Finder AppleShowAllFiles YES<br>defaults write com.apple.Finder AppleShowAllFiles NO</p>
-<p>多说<br><a href="http://zgpeace.duoshuo.com/admin/tools/" target="_blank" rel="external">http://zgpeace.duoshuo.com/admin/tools/</a></p>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考："><span class="toc-number">1.</span> <span class="toc-text">参考：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下："><span class="toc-number">2.</span> <span class="toc-text">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="参考：">参考：</h2><p> 1、内容详尽：<a href="http://my.oschina.net/shede333/blog/172785" target="_blank" rel="external">code的Architectures和Valid Architectures的区别,以及…</a>  </p>
+<p> 2、补充查询静态库支持架构的命令：<a href="http://blog.csdn.net/u012186949/article/details/41910361" target="_blank" rel="external">Xcode Build Settings中的Architecture概述
+</a></p>
+<h2 id="查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下：">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>IOS JohnChen$ cd <span class="regexp">/Users/</span>JohnChen<span class="regexp">/Library/</span>Developer<span class="regexp">/Xcode/</span>DerivedData<span class="regexp">/.../</span>Build<span class="regexp">/Products/</span>Debug-iphoneos</span><br><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>Debug-iphoneos JohnChen$ lipo -info libBuyBundle.a </span><br><span class="line">Architectures <span class="keyword">in</span> the fat <span class="string">file:</span> libBuyBundle.a <span class="string">are:</span> armv7 arm64</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -125,7 +125,7 @@ problem:$hexo –version
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://zgpeace.github.io/hexo-basic.html" data-title="hexo-basic | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
+	  <div data-url="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/" data-title="Xcode Build Settings中的Architecture概述 | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -149,12 +149,25 @@ problem:$hexo –version
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/10/26/hello-world/"  title="Only One Hour Learning For Everyday [每天一小时]">
+ <strong>下一篇：</strong><br/> 
+ <span>Only One Hour Learning For Everyday [每天一小时]
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 
 
 
 <section id="comments" class="comment">
-<div class="ds-thread" data-thread-key="hexo-basic.html" data-title="hexo-basic" data-url="https://zgpeace.github.io/hexo-basic.html"></div>
+<div class="ds-thread" data-thread-key="2015/10/26/xcode-build-setting-architecture/" data-title="Xcode Build Settings中的Architecture概述" data-url="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"sunhongtao"};
 (function() {
@@ -170,8 +183,56 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 </section>
 
 </div>  
-        </div>
-        <footer><div id="footer" >
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考："><span class="toc-number">1.</span> <span class="toc-text">参考：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下："><span class="toc-number">2.</span> <span class="toc-text">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -212,7 +273,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 		</p>
 </div>
 </footer>
-        <script src="/js/jquery-2.0.3.min.js"></script>
+    <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.qrcode-0.12.0.min.js"></script>
@@ -256,8 +317,36 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
   });
 });
 </script>
@@ -370,6 +459,5 @@ $(document).ready(function(){
 
 <!-- Tiny_search End -->
 
-      </body>
-     </html>
-     
+  </body>
+</html>

@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zgpeace.github.io/2015/10/25/hexo-basic/</loc>
-    <lastmod>2015-10-25T12:56:13.000Z</lastmod>
+    <loc>https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/</loc>
+    <lastmod>2015-10-26T07:26:29.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/10/25/hello-world/</loc>
-    <lastmod>2015-10-25T12:52:37.000Z</lastmod>
+    <loc>https://zgpeace.github.io/2015/10/26/hello-world/</loc>
+    <lastmod>2015-10-26T00:52:51.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zgpeace.github.io/2015/10/25/hexo-basic/</loc>
+    <lastmod>2015-10-25T12:56:13.000Z</lastmod>
   </url>
   
   <url>
@@ -24,11 +29,6 @@
   <url>
     <loc>https://zgpeace.github.io/about/index.html</loc>
     <lastmod>2015-10-25T02:56:43.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zgpeace.github.io/hexo-basic.html</loc>
-    <lastmod>2015-10-25T02:54:25.000Z</lastmod>
   </url>
   
 </urlset>

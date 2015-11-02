@@ -230,8 +230,13 @@
     <div class="article-content">
         
         <h2 id="AWESOME_BLOG_SHARE">AWESOME BLOG SHARE</h2><h3 id="世界人民都在吃什么？[科学人]"><a href="http://www.guokr.com/article/64218/" target="_blank" rel="external">世界人民都在吃什么？</a>[科学人]</h3><h3 id="你的生活方式，大脑喜欢吗？[科学人]"><a href="http://www.guokr.com/article/282059/" target="_blank" rel="external">你的生活方式，大脑喜欢吗？</a>[科学人]</h3><pre><code>大脑开始抗议了。于是你加班到深夜回家发现没带钥匙；于是你在打开文件夹后怎么也想不起来究竟要打开哪个文件；于是你晚上睡不着白天哈欠连天……最近有看到广告创意提出困扰白领工作的“坏记猩”、“搞错鸟”、“好累鸭”等这样的八大“脑兽”，也着实贴切。
-</code></pre><h3 id="NSLog常见格式总结[chase的博客]"><a href="http://blog.sina.com.cn/s/blog_7a2ffd5c0100tyu4.html" target="_blank" rel="external">NSLog常见格式总结</a>[chase的博客]</h3><pre><code>附 NSLog输出格式
-   •    <span class="variable">%@</span>          对象，如NSString
+</code></pre><h3 id="制作越狱包发布到非App_Store平台[再见猪八戒Zz]"><a href="http://www.jianshu.com/p/a5859d8f8005" target="_blank" rel="external">制作越狱包发布到非App Store平台</a>[再见猪八戒Zz]</h3><ol>
+<li>首先，你需要通过xcode进行Archive，在菜单的Product下面，方法不再赘述。  </li>
+<li>第二步，将该文件的后缀名改成zip。举个例子，把feimaobijia.ipa改成feimaobijia.zip，然后双击进行解压，然后会解压出一个名为Payload的文件夹。在该文件夹内是一个用你BundleName命名的文件，鼠标对准，然后右击，选择“显示包内容”，这时会显示里面的所有内容，这些内容主要是你的资源文件，例如图片和nib文件等等。</li>
+<li>第三步，这也是最关键的一步，在这些文件中找到名为“info.plist”的文件，双击打开（用xcode或者文本编辑器），直接选择用xcode打开就可以了，然后再里面添加字段，其中Key是SignerIdentity，Value是Apple iPhone OS Application Signing。然后保存该文件。<br>第四步，将Payload压缩，然后将压缩后的文件后缀名改成ipa即可。<br>到此为止，越狱包的制作流程就讲解完毕，接下来你就可以在各渠道发布你的app了。这个ipa越狱包可以安装在没有证书的手机上。这就是传说中的越狱包</li>
+</ol>
+<h3 id="NSLog常见格式总结[chase的博客]"><a href="http://blog.sina.com.cn/s/blog_7a2ffd5c0100tyu4.html" target="_blank" rel="external">NSLog常见格式总结</a>[chase的博客]</h3><pre><code>附 NSLog输出格式
+    •    <span class="variable">%@</span>          对象，如NSString
     •    <span class="variable">%d</span>, <span class="variable">%i</span>      整数 <span class="variable">%和</span>d之间可以指定位数。如<span class="number">02</span>：表示整数位数至少为<span class="number">2</span>位。不足则补<span class="number">0</span>
     •    <span class="variable">%u</span>          无符整形
     •    <span class="variable">%f</span>          浮点/双字，<span class="variable">%.</span><span class="number">2</span>f：保留两位小数

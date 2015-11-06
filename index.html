@@ -81,6 +81,144 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/11/06/pod-warning/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-06T05:08:23.000Z" itemprop="datePublished"> 发表于 2015-11-06</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>title: pod-warning<br>date: 2015-11-06 11:14:21<br>categories:cocoapods<br>tags:cocoapods</p>
+<h2 id="description:去除cocoapods_warning，以及_OS_X_10-11_，_default_enable_rootless_下如何安装程序">description:去除cocoapods warning，以及 OS X 10.11 ， default enable rootless 下如何安装程序</h2><h2 id="Cocoapods_0-35-0_运行pod时候，有很多警告，解决方案：删掉所有cocoapods，然后重装，可以解决。">Cocoapods 0.35.0 运行pod时候，有很多警告，解决方案：删掉所有cocoapods，然后重装，可以解决。</h2><h3 id="1、看看目前有安装cocoapods相关程序：gem_list_–local_|_grep_cocoapods">1、看看目前有安装cocoapods相关程序：gem list –local | grep cocoapods</h3><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ChenJohns-MacBook-Air:~ JohnChen$ gem list --local | grep cocoapods</span><br><span class="line">cocoapods (0.35.0)</span><br><span class="line">cocoapods-core (0.38.2, 0.35.0)</span><br><span class="line">cocoapods-downloader (0.9.3, 0.8.1)</span><br><span class="line">cocoapods-plugins (0.4.2, 0.3.2)</span><br><span class="line">cocoapods-search (0.1.0)</span><br><span class="line">cocoapods-stats (0.6.2, 0.6.1, 0.5.3)</span><br><span class="line">cocoapods-trunk (0.6.4, 0.4.1)</span><br><span class="line">cocoapods-<span class="keyword">try</span> (0.5.1, 0.4.5)</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">### 2、删除相关cocoapods</span><br><span class="line">#### sudo gem uninstall cocoapods -v 0.35.0</span><br></pre></td></tr></table></figure>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods -v 0.35.0<br>Password:<br>Remove executables:<br>    pod, sandbox-pod</p>
+<p>in addition to the gem? [Yn]  Y<br>Removing pod<br>Removing sandbox-pod<br>Successfully uninstalled cocoapods-0.35.0<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#### sudo gem uninstall cocoapods-core</span></span><br></pre></td></tr></table></figure></p>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-core</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-core-0.35.0</li>
+<li>cocoapods-core-0.38.2</li>
+<li>All versions<blockquote>
+<p>3<br>Successfully uninstalled cocoapods-core-0.35.0<br>Successfully uninstalled cocoapods-core-0.38.2</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#### sudo gem uninstall cocoapods-downloader</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-downloader</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-downloader-0.8.1</li>
+<li>cocoapods-downloader-0.9.3</li>
+<li>All versions<blockquote>
+<p>3<br>Successfully uninstalled cocoapods-downloader-0.8.1<br>Successfully uninstalled cocoapods-downloader-0.9.3</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#### sudo gem uninstall cocoapods-plugins</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-plugins</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-plugins-0.3.2</li>
+<li>cocoapods-plugins-0.4.2</li>
+<li>All versions<blockquote>
+<p>3<br>Successfully uninstalled cocoapods-plugins-0.3.2<br>Successfully uninstalled cocoapods-plugins-0.4.2</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### sudo gem <span class="operator"><span class="keyword">uninstall</span> cocoapods-<span class="keyword">search</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-search<br>Successfully uninstalled cocoapods-search-0.1.0<br>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-stats</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-stats-0.5.3</li>
+<li>cocoapods-stats-0.6.1</li>
+<li>cocoapods-stats-0.6.2</li>
+<li>All versions<blockquote>
+<p>4<br>Successfully uninstalled cocoapods-stats-0.5.3<br>Successfully uninstalled cocoapods-stats-0.6.1<br>Successfully uninstalled cocoapods-stats-0.6.2</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#### sudo gem uninstall cocoapods-trunk</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-trunk</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-trunk-0.4.1</li>
+<li>cocoapods-trunk-0.6.4</li>
+<li>All versions<blockquote>
+<p>3<br>Successfully uninstalled cocoapods-trunk-0.4.1<br>Successfully uninstalled cocoapods-trunk-0.6.4</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#### sudo gem uninstall cocoapods-try</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem uninstall cocoapods-try</p>
+<p>Select gem to uninstall:</p>
+<ol>
+<li>cocoapods-try-0.4.5</li>
+<li>cocoapods-try-0.5.1</li>
+<li>All versions<blockquote>
+<p>3<br>Successfully uninstalled cocoapods-try-0.4.5<br>Successfully uninstalled cocoapods-try-0.5.1</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 查看是否还有没相关的： gem <span class="built_in">list</span> --<span class="keyword">local</span> | grep cocoapods</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ gem list –local | grep cocoapods<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">## 运行 terminal in OS X <span class="number">10.11</span> ， default enable rootless ,所以gem install  <span class="string">"Operation not permitted - /usr/bin/pod"</span>  </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">### sudo gem install cocoapods -v <span class="number">0.35</span><span class="number">.0</span></span></span><br></pre></td></tr></table></figure></p>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem install cocoapods -v 0.35.0<br>Fetching: cocoapods-trunk-0.4.1.gem (100%)<br>Successfully installed cocoapods-trunk-0.4.1<br>Fetching: cocoapods-try-0.4.5.gem (100%)<br>Successfully installed cocoapods-try-0.4.5<br>Fetching: cocoapods-plugins-0.3.2.gem (100%)<br>Successfully installed cocoapods-plugins-0.3.2<br>Fetching: cocoapods-downloader-0.8.1.gem (100%)<br>Successfully installed cocoapods-downloader-0.8.1<br>Fetching: cocoapods-core-0.35.0.gem (100%)<br>Successfully installed cocoapods-core-0.35.0<br>Fetching: cocoapods-0.35.0.gem (100%)<br>ERROR:  While executing gem … (Errno::EPERM)<br>    Operation not permitted - /usr/bin/pod<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![<span class="link_label">OS X image</span>](<span class="link_url">./images/pod-warning/pod-warning-system.png</span>)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="header">### 解决方法1: 命令增加 -n /usr/local/bin</span></span><br></pre></td></tr></table></figure></p>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ sudo gem install -n /usr/local/bin cocoapods -v 0.35.0<br>Password:<br>Successfully installed cocoapods-0.35.0<br>Parsing documentation for cocoapods-0.35.0<br>Installing ri documentation for cocoapods-0.35.0<br>Done installing documentation for cocoapods after 3 seconds<br>1 gem installed<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">参考如下：  </span><br><span class="line">![<span class="link_label">OS X image</span>](<span class="link_url">./images/pod-warning/pod-warning-rootless.png</span>)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="header">### 验证成功：pod --version</span></span><br></pre></td></tr></table></figure></p>
+<p>ChenJohns-MacBook-Air:~ JohnChen$ pod –version<br>0.35.0</p>
+<p>```</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  -->
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/10/26/xcode-build-setting-architecture/" title="Xcode Build Settings中的Architecture概述" itemprop="url">Xcode Build Settings中的Architecture概述</a>
   </h1>
   <p class="article-author">By

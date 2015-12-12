@@ -94,11 +94,10 @@
 </header>
     <div class="article-content">
         
-        <p>#清除Mac Storage<br>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+        <h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
 <p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
 <p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
-<p>##Mac添加命令别名</p>
-<ol>
+<h2 id="Mac添加命令别名">Mac添加命令别名</h2><ol>
 <li>切换到用户主目录  <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/YourName/</span><br><span class="line"><span class="escape">``</span><span class="escape">`　</span>　</span><br><span class="line"><span class="number">2</span>. 编辑或新建.bash_profile文件</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -108,7 +107,7 @@
 <p>$ alias<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span> storage满的时候只要在Terminal中运行purgeAllBuilds即可</span><br></pre></td></tr></table></figure></p>
 <p>$ purgeAllBuilds<br>```</p>
 <p>注：Mac别名设置与Linux大体相同，仅配置文件不同。可参考Linux alias命令</p>
-<p>清除后Storage截图，Other占用65G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+<h1 id="清除后Storage截图，Other占用65G">清除后Storage截图，Other占用65G</h1><p><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
 
         
         
@@ -181,7 +180,7 @@
 </header>
     <div class="article-content">
         
-        <p>##<a href="http://www.cocoachina.com/ios/20151210/14635.html" target="_blank" rel="external">94个iOS开发资源推荐，帮你加速应用开发</a><br>Original ： <a href="https://medium.com/@dvreddy/99-great-resources-for-ios-developers-82743b96f3c8#.1ixwyff2d" target="_blank" rel="external">99 Great Resources for iOS Developers</a></p>
+        <h2 id="94个iOS开发资源推荐，帮你加速应用开发"><a href="http://www.cocoachina.com/ios/20151210/14635.html" target="_blank" rel="external">94个iOS开发资源推荐，帮你加速应用开发</a></h2><p>Original ： <a href="https://medium.com/@dvreddy/99-great-resources-for-ios-developers-82743b96f3c8#.1ixwyff2d" target="_blank" rel="external">99 Great Resources for iOS Developers</a></p>
 
         
         

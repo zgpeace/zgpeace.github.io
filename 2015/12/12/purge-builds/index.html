@@ -19,7 +19,7 @@
 <meta property="og:description" content="clear storage Mac">
 <meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-storage-after.png">
 <meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-storage-after.png">
-<meta property="og:updated_time" content="2015-12-12T13:24:10.000Z">
+<meta property="og:updated_time" content="2015-12-12T13:25:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="purge-builds">
 <meta name="twitter:description" content="clear storage Mac">
@@ -98,15 +98,14 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#清除Mac_Storage"><span class="toc-number">1.</span> <span class="toc-text">清除Mac Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac添加命令别名"><span class="toc-number">1.1.</span> <span class="toc-text">Mac添加命令别名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清除后Storage截图，Other占用65G"><span class="toc-number">2.</span> <span class="toc-text">清除后Storage截图，Other占用65G</span></a></li></ol>
 		
 		</div>
 		
-		<p>#清除Mac Storage<br>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+		<h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
 <p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
 <p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
-<p>##Mac添加命令别名</p>
-<ol>
+<h2 id="Mac添加命令别名">Mac添加命令别名</h2><ol>
 <li>切换到用户主目录  <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/YourName/</span><br><span class="line"><span class="escape">``</span><span class="escape">`　</span>　</span><br><span class="line"><span class="number">2</span>. 编辑或新建.bash_profile文件</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -116,7 +115,7 @@
 <p>$ alias<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span> storage满的时候只要在Terminal中运行purgeAllBuilds即可</span><br></pre></td></tr></table></figure></p>
 <p>$ purgeAllBuilds<br>```</p>
 <p>注：Mac别名设置与Linux大体相同，仅配置文件不同。可参考Linux alias命令</p>
-<p>清除后Storage截图，Other占用65G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+<h1 id="清除后Storage截图，Other占用65G">清除后Storage截图，Other占用65G</h1><p><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -202,7 +201,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#清除Mac_Storage"><span class="toc-number">1.</span> <span class="toc-text">清除Mac Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac添加命令别名"><span class="toc-number">1.1.</span> <span class="toc-text">Mac添加命令别名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清除后Storage截图，Other占用65G"><span class="toc-number">2.</span> <span class="toc-text">清除后Storage截图，Other占用65G</span></a></li></ol>
  
   </div>
 

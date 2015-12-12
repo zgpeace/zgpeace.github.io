@@ -94,7 +94,7 @@
 </header>
     <div class="article-content">
         
-        <h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+        <h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G，OmniDiskSweeper检查Other情况如下：<br><img src="/img/purge-builds/purge-builds-full-before.png" alt="OS X rootless image">  </p>
 <p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
 <p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
 <h2 id="Mac添加命令别名">Mac添加命令别名</h2><ol>

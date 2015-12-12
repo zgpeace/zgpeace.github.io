@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://zgpeace.github.io/2015/12/12/purge-builds/index.html">
 <meta property="og:site_name" content="zgpeace [易筋修行]">
 <meta property="og:description" content="clear storage Mac">
+<meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-full-before.png">
 <meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-storage-after.png">
-<meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-storage-after.png">
-<meta property="og:updated_time" content="2015-12-12T13:25:59.000Z">
+<meta property="og:updated_time" content="2015-12-12T13:31:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="purge-builds">
 <meta name="twitter:description" content="clear storage Mac">
@@ -102,7 +102,7 @@
 		
 		</div>
 		
-		<h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+		<h1 id="清除Mac_Storage">清除Mac Storage</h1><p>清除前只剩下4G, 120G硬盘Other占用89G，OmniDiskSweeper检查Other情况如下：<br><img src="/img/purge-builds/purge-builds-full-before.png" alt="OS X rootless image">  </p>
 <p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
 <p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
 <h2 id="Mac添加命令别名">Mac添加命令别名</h2><ol>

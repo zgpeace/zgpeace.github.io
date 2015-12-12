@@ -81,6 +81,93 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/12/12/purge-builds/" title="purge-builds" itemprop="url">purge-builds</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
+		
+  <p class="article-time">
+    <time datetime="2015-12-12T12:49:26.000Z" itemprop="datePublished"> 发表于 2015-12-12</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>#清除Mac Storage<br>清除前只剩下4G, 120G硬盘Other占用89G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+<p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
+<p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
+<p>##Mac添加命令别名</p>
+<ol>
+<li>切换到用户主目录  <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/YourName/</span><br><span class="line"><span class="escape">``</span><span class="escape">`　</span>　</span><br><span class="line"><span class="number">2</span>. 编辑或新建.bash_profile文件</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>$ vim .bash_profile<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3</span>. 添加别名</span><br><span class="line"></span><br><span class="line">命令别名设置语法：</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> [别名]=<span class="string">'[指令名称]'</span></span><br><span class="line"></span><br><span class="line">注意：等号两边均无空格，指令名称中如有空格，需用引号包裹</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -l'</span></span><br></pre></td></tr></table></figure></p>
+<p>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">4.</span> 重载该配置文件</span><br></pre></td></tr></table></figure></p>
+<p>$ source ./bash_profile<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5.</span> 查看当前所有别名设置</span><br></pre></td></tr></table></figure></p>
+<p>$ alias<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span> storage满的时候只要在Terminal中运行purgeAllBuilds即可</span><br></pre></td></tr></table></figure></p>
+<p>$ purgeAllBuilds<br>```</p>
+<p>注：Mac别名设置与Linux大体相同，仅配置文件不同。可参考Linux alias命令</p>
+<p>清除后Storage截图，Other占用65G<br><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Mac/">Mac</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Mac-clear-storage-Mac-purge-builds/">Mac, clear storage Mac, purge builds</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  -->
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/12/12/blog-list/" title="Blog-List" itemprop="url">Blog-List</a>
   </h1>
   <p class="article-author">By
@@ -771,6 +858,10 @@ whatis                  查看变理的数据类型
 		  
 		
 		  
+			<li><a href="/categories/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/UI/" title="UI">UI<sup>1</sup></a></li>
 		  
 		
@@ -792,11 +883,15 @@ whatis                  查看变理的数据类型
 			
 		
 			
-				<li><a href="/tags/cocoapods/" title="cocoapods">cocoapods<sup>1</sup></a></li>
+				<li><a href="/tags/Mac-clear-storage-Mac-purge-builds/" title="Mac, clear storage Mac, purge builds">Mac, clear storage Mac, purge builds<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Present-Modal-View/" title="Present Modal View">Present Modal View<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/cocoapods/" title="cocoapods">cocoapods<sup>1</sup></a></li>
 			
 		
 			

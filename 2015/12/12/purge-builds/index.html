@@ -19,7 +19,7 @@
 <meta property="og:description" content="clear storage Mac">
 <meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-full-before.png">
 <meta property="og:image" content="https://zgpeace.github.io/img/purge-builds/purge-builds-storage-after.png">
-<meta property="og:updated_time" content="2015-12-12T13:31:14.000Z">
+<meta property="og:updated_time" content="2015-12-13T03:30:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="purge-builds">
 <meta name="twitter:description" content="clear storage Mac">
@@ -106,14 +106,33 @@
 <p>发现主要是<br>1、占用20G ~/Library/Developer/Xcode/DerivedData/<em><br>2、占用10G ~/Library/Developer/Xcode/iOS DeviceSupport/</em><br>清除1中的全部，2中不需要的模拟器，即可。<br>rm -rf ~/Library/Developer/Xcode/DerivedData/*  </p>
 <p>因为清除比较频繁，增加一个Alias比较方便。<br>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’</p>
 <h2 id="Mac添加命令别名">Mac添加命令别名</h2><ol>
-<li>切换到用户主目录  <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/YourName/</span><br><span class="line"><span class="escape">``</span><span class="escape">`　</span>　</span><br><span class="line"><span class="number">2</span>. 编辑或新建.bash_profile文件</span><br></pre></td></tr></table></figure>
-</li>
+<li>切换到用户主目录  </li>
 </ol>
-<p>$ vim .bash_profile<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3</span>. 添加别名</span><br><span class="line"></span><br><span class="line">命令别名设置语法：</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> [别名]=<span class="string">'[指令名称]'</span></span><br><span class="line"></span><br><span class="line">注意：等号两边均无空格，指令名称中如有空格，需用引号包裹</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -l'</span></span><br></pre></td></tr></table></figure></p>
-<p>alias purgeAllBuilds=’rm -rf ~/Library/Developer/Xcode/DerivedData/*’<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">4.</span> 重载该配置文件</span><br></pre></td></tr></table></figure></p>
-<p>$ source ./bash_profile<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5.</span> 查看当前所有别名设置</span><br></pre></td></tr></table></figure></p>
-<p>$ alias<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span> storage满的时候只要在Terminal中运行purgeAllBuilds即可</span><br></pre></td></tr></table></figure></p>
-<p>$ purgeAllBuilds<br>```</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /Users/YourName/</span><br></pre></td></tr></table></figure>
+<ol>
+<li>编辑或新建.bash_profile文件   </li>
+</ol>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vim .bash_profile</span><br></pre></td></tr></table></figure>
+<ol>
+<li>添加别名</li>
+</ol>
+<p>命令别名设置语法：</p>
+<p>alias [别名]=’[指令名称]’</p>
+<p>注意：等号两边均无空格，指令名称中如有空格，需用引号包裹</p>
+<p>例如：<br>alias ll=’ls -l’  </p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> purgeAllBuilds=<span class="attribute">'rm</span> -rf ~/<span class="keyword">Library</span>/Developer/Xcode/DerivedData<span class="comment">/*'</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>重载该配置文件  </li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ./bash_profile</span><br></pre></td></tr></table></figure>
+<ol>
+<li>查看当前所有别名设置  </li>
+</ol>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span><span class="keyword">alias</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>storage满的时候只要在Terminal中运行purgeAllBuilds即可  </li>
+</ol>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>purgeAllBuilds</span><br></pre></td></tr></table></figure>
 <p>注：Mac别名设置与Linux大体相同，仅配置文件不同。可参考Linux alias命令</p>
 <h1 id="清除后Storage截图，Other占用65G">清除后Storage截图，Other占用65G</h1><p><img src="/img/purge-builds/purge-builds-storage-after.png" alt="OS X rootless image">  </p>
   

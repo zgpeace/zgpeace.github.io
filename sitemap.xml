@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zgpeace.github.io/2015/12/12/blog-list/</loc>
+    <lastmod>2015-12-29T06:51:39.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zgpeace.github.io/2015/10/26/good-article/</loc>
     <lastmod>2015-12-29T06:42:32.000Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>https://zgpeace.github.io/2015/12/12/purge-builds/</loc>
     <lastmod>2015-12-13T03:47:03.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zgpeace.github.io/2015/12/12/blog-list/</loc>
-    <lastmod>2015-12-12T13:26:18.000Z</lastmod>
   </url>
   
   <url>

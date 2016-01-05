@@ -287,7 +287,7 @@ Tire *tires[<span class="number">4</span>];
 Engine *engine;
 }
 这样在编译的时候，编译器便会知道Tire和Engine都是类，但不知道其它信息，因此如果要调用Tire和Engine的方法时将不可以。
-</code></pre><h3 id="iOS_并发编程之_Operation_Queues_［雷纯锋的技术博客］"><a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/" target="_blank" rel="external">iOS 并发编程之 Operation Queues</a> ［雷纯锋的技术博客］</h3><pre><code>响应取消事件
+</code></pre><h3 id="iOS_并发编程之_Operation_Queues[雷纯锋的技术博客］"><a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/" target="_blank" rel="external">iOS 并发编程之 Operation Queues</a>[雷纯锋的技术博客］</h3><pre><code>响应取消事件
 
 当一个 operation 开始执行后，它会一直执行它的任务直到完成或被取消为止。我们可以在任意时间点取消一个 operation ，甚至是在它还未开始执行   之前。为了让我们自定义的 operation 能够支持取消事件，我们需要在代码中定期地检查 isCancelled 方法的返回值，一旦检查到这个方法返回  
  <span class="keyword">YES</span> ，我们就需要立即停止执行接下来的任务。根据苹果官方的说法，isCancelled 方法本身是足够轻量的，所以就算是频繁地调用它也不会给系统带来  

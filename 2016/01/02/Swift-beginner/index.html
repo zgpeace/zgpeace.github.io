@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://zgpeace.github.io/2016/01/02/Swift-beginner/index.html">
 <meta property="og:site_name" content="zgpeace [易筋修行]">
 <meta property="og:description" content="Swift source for bginner">
-<meta property="og:updated_time" content="2016-01-04T03:11:53.000Z">
+<meta property="og:updated_time" content="2016-03-04T14:41:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift-beginner">
 <meta name="twitter:description" content="Swift source for bginner">
@@ -96,12 +96,17 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Start_Developing_iOS_Apps_(Swift)"><span class="toc-number">1.</span> <span class="toc-text">1、Start Developing iOS Apps (Swift)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Swift_print,_println,_NSLog"><span class="toc-number">2.</span> <span class="toc-text">2、Swift print, println, NSLog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1、The_as!_Operator"><span class="toc-number">3.</span> <span class="toc-text">3.1、The as! Operator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2_Type_Casting"><span class="toc-number">4.</span> <span class="toc-text">3.2 Type Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4_Swift_Guard_Statement"><span class="toc-number">5.</span> <span class="toc-text">4 Swift Guard Statement</span></a></li></ol>
 		
 		</div>
 		
-		<p><a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1" target="_blank" rel="external">Start Developing iOS Apps (Swift)</a></p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Getting Started </span><br><span class="line">Building <span class="operator">the</span> UI</span><br><span class="line">Working <span class="operator">with</span> Table Views</span><br></pre></td></tr></table></figure>
+		<h3 id="1、Start_Developing_iOS_Apps_(Swift)">1、<a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1" target="_blank" rel="external">Start Developing iOS Apps (Swift)</a></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Getting Started </span><br><span class="line">Building <span class="operator">the</span> UI</span><br><span class="line">Working <span class="operator">with</span> Table Views</span><br></pre></td></tr></table></figure>
+<h3 id="2、Swift_print,_println,_NSLog">2、<a href="http://www.knowstack.com/swift-print-println-nslog/" target="_blank" rel="external">Swift print, println, NSLog</a></h3><p>NSLog vs println</p>
+<p>NSLog is slower<br>NSLog adds a timestamp and identifier to the output, whereas println will not;<br>NSLog synchronizes the log statements so that if you’re issuing logs from different threads concurrently, they won’t overlap with each other; println can result in jumbled output if performed simultaneously from separate threads without doing some synchronization (e.g. dispatching it to some serial queue, such as the main queue);<br>When performed on physical device, NSLog statements appear in the device’s console whereas println only appears in the debugger console.</p>
+<h3 id="3-1、The_as!_Operator">3.1、<a href="https://developer.apple.com/swift/blog/?id=23" target="_blank" rel="external">The as! Operator</a></h3><p>It may be easiest to remember the pattern for these operators in Swift as: <code>!</code> implies “this might trap,” while <code>?</code> indicates “this might be nil.”</p>
+<h3 id="3-2_Type_Casting">3.2 <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html" target="_blank" rel="external">Type Casting</a></h3><p>Type casting is a way to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy.</p>
+<p>Type casting in Swift is implemented with the is and as operators. These two operators provide a simple and expressive way to check the type of a value or cast a value to a different type.</p>
+<h3 id="4_Swift_Guard_Statement">4 <a href="http://ericcerney.com/swift-guard-statement/" target="_blank" rel="external">Swift Guard Statement</a></h3><p>Like an <font color="#ff8300">if</font> statement,  <font color="#ff8300">guard</font> executes statements based on a Boolean value of an expression. Unlicke an  <font color="#ff8300">if</font> statement,  <font color="#ff8300">guard</font> statements only run if the conditions are not met. You can think of  <font color="#ff8300">guard</font> more like an  <font color="#ff8300">Assert</font>, but rather than crashing, you can gracefully exit.</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -195,7 +200,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Start_Developing_iOS_Apps_(Swift)"><span class="toc-number">1.</span> <span class="toc-text">1、Start Developing iOS Apps (Swift)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Swift_print,_println,_NSLog"><span class="toc-number">2.</span> <span class="toc-text">2、Swift print, println, NSLog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1、The_as!_Operator"><span class="toc-number">3.</span> <span class="toc-text">3.1、The as! Operator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2_Type_Casting"><span class="toc-number">4.</span> <span class="toc-text">3.2 Type Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4_Swift_Guard_Statement"><span class="toc-number">5.</span> <span class="toc-text">4 Swift Guard Statement</span></a></li></ol>
  
   </div>
 

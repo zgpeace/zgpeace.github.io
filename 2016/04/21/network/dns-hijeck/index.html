@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Swift-beginner | zgpeace [易筋修行]</title>
+    <title>DNS hijack DNS劫持 | zgpeace [易筋修行]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zgpeace">
     
 
     
-    <meta name="description" content="Swift source for bginner">
+    <meta name="description" content="Google DNS劫持背后的技术分析扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift-beginner">
-<meta property="og:url" content="https://zgpeace.github.io/2016/01/02/Swift-beginner/index.html">
+<meta property="og:title" content="DNS hijack DNS劫持">
+<meta property="og:url" content="https://zgpeace.github.io/2016/04/21/network/dns-hijeck/index.html">
 <meta property="og:site_name" content="zgpeace [易筋修行]">
-<meta property="og:description" content="Swift source for bginner">
-<meta property="og:updated_time" content="2016-03-16T06:42:21.000Z">
+<meta property="og:description" content="Google DNS劫持背后的技术分析扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”">
+<meta property="og:updated_time" content="2016-04-21T07:38:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift-beginner">
-<meta name="twitter:description" content="Swift source for bginner">
+<meta name="twitter:title" content="DNS hijack DNS劫持">
+<meta name="twitter:description" content="Google DNS劫持背后的技术分析扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”">
 
     
     <link rel="alternative" href="/atom.xml" title="zgpeace [易筋修行]" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/02/Swift-beginner/" title="Swift-beginner" itemprop="url">Swift-beginner</a>
+      <a href="/2016/04/21/network/dns-hijeck/" title="DNS hijack DNS劫持" itemprop="url">DNS hijack DNS劫持</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-02T13:45:43.000Z" itemprop="datePublished"> 发表于 2016-01-02</time>
+    <time datetime="2016-04-21T07:36:44.000Z" itemprop="datePublished"> 发表于 2016-04-21</time>
     
   </p>
 </header>
@@ -96,32 +96,24 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0、_Top_10_iOS_Conferences_in_2016"><span class="toc-number">1.</span> <span class="toc-text">0、 Top 10 iOS Conferences in 2016</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Start_Developing_iOS_Apps_(Swift)"><span class="toc-number">2.</span> <span class="toc-text">1、Start Developing iOS Apps (Swift)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Swift_print,_println,_NSLog"><span class="toc-number">3.</span> <span class="toc-text">2、Swift print, println, NSLog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1、The_as!_Operator"><span class="toc-number">4.</span> <span class="toc-text">3.1、The as! Operator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2_Type_Casting"><span class="toc-number">5.</span> <span class="toc-text">3.2 Type Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4_Swift_Guard_Statement"><span class="toc-number">6.</span> <span class="toc-text">4 Swift Guard Statement</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Google_DNS劫持背后的技术分析"><span class="toc-number">1.</span> <span class="toc-text">Google DNS劫持背后的技术分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扫盲_DNS_原理，兼谈“域名劫持”和“域名欺骗/域名污染”"><span class="toc-number">2.</span> <span class="toc-text">扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”</span></a></li></ol>
 		
 		</div>
 		
-		<h3 id="0、_Top_10_iOS_Conferences_in_2016">0、 <a href="https://www.raywenderlich.com/127022/top-10-ios-conferences-in-2016" target="_blank" rel="external">Top 10 iOS Conferences in 2016</a></h3><p>1) WWDC and AltConf<br>2) 360iDev<br>3) RWDevCon<br>4) CocaLove<br>5) CocoaConf<br>6) iOSDevUK<br>7) NSNorth<br>8) NSSpain<br>9) #Pragma Conference<br>10) UIKonf</p>
-<h3 id="1、Start_Developing_iOS_Apps_(Swift)">1、<a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1" target="_blank" rel="external">Start Developing iOS Apps (Swift)</a></h3><p> Getting Started<br> Building the UI<br> Working with Table Views</p>
-<h3 id="2、Swift_print,_println,_NSLog">2、<a href="http://www.knowstack.com/swift-print-println-nslog/" target="_blank" rel="external">Swift print, println, NSLog</a></h3><p>NSLog vs println</p>
-<p>NSLog is slower<br>NSLog adds a timestamp and identifier to the output, whereas println will not;<br>NSLog synchronizes the log statements so that if you’re issuing logs from different threads concurrently, they won’t overlap with each other; println can result in jumbled output if performed simultaneously from separate threads without doing some synchronization (e.g. dispatching it to some serial queue, such as the main queue);<br>When performed on physical device, NSLog statements appear in the device’s console whereas println only appears in the debugger console.</p>
-<h3 id="3-1、The_as!_Operator">3.1、<a href="https://developer.apple.com/swift/blog/?id=23" target="_blank" rel="external">The as! Operator</a></h3><p>It may be easiest to remember the pattern for these operators in Swift as: <code>!</code> implies “this might trap,” while <code>?</code> indicates “this might be nil.”</p>
-<h3 id="3-2_Type_Casting">3.2 <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html" target="_blank" rel="external">Type Casting</a></h3><p>Type casting is a way to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy.</p>
-<p>Type casting in Swift is implemented with the is and as operators. These two operators provide a simple and expressive way to check the type of a value or cast a value to a different type.</p>
-<h3 id="4_Swift_Guard_Statement">4 <a href="http://ericcerney.com/swift-guard-statement/" target="_blank" rel="external">Swift Guard Statement</a></h3><p>Like an <font color="#ff8300">if</font> statement,  <font color="#ff8300">guard</font> executes statements based on a Boolean value of an expression. Unlicke an  <font color="#ff8300">if</font> statement,  <font color="#ff8300">guard</font> statements only run if the conditions are not met. You can think of  <font color="#ff8300">guard</font> more like an  <font color="#ff8300">Assert</font>, but rather than crashing, you can gracefully exit.</p>
-  
+		<h3 id="Google_DNS劫持背后的技术分析"><a href="http://drops.wooyun.org/papers/1207" target="_blank" rel="external">Google DNS劫持背后的技术分析</a></h3><h3 id="扫盲_DNS_原理，兼谈“域名劫持”和“域名欺骗/域名污染”"><a href="https://program-think.blogspot.com/2014/01/dns.html" target="_blank" rel="external">扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”</a></h3>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Swift/">Swift</a>
+  <a class="article-category-link" href="/categories/DNS/">DNS</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Swift/">Swift</a>
+  <span></span> <a href="/tags/dns/">dns</a>
   </div>
 
 </div>
@@ -130,7 +122,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://zgpeace.github.io/2016/01/02/Swift-beginner/" data-title="Swift-beginner | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
+	  <div data-url="https://zgpeace.github.io/2016/04/21/network/dns-hijeck/" data-title="DNS hijack DNS劫持 | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -156,19 +148,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/01/05/XX-Net-Agent/" title="XX-Net-Agent 代理用法，替代了goagent">
-  <strong>上一篇：</strong><br/>
-  <span>
-  XX-Net-Agent 代理用法，替代了goagent</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/01/01/Copenhagen-Berlin-Poland-2015/"  title="Copenhagen-Berlin-Poland-2015">
+<a href="/2016/03/28/objc/Runtime-Objc/"  title="Runtime-Objc">
  <strong>下一篇：</strong><br/> 
- <span>Copenhagen-Berlin-Poland-2015
+ <span>Runtime-Objc
 </span>
 </a>
 </div>
@@ -180,7 +164,7 @@
 
 
 <section id="comments" class="comment">
-<div class="ds-thread" data-thread-key="2016/01/02/Swift-beginner/" data-title="Swift-beginner" data-url="https://zgpeace.github.io/2016/01/02/Swift-beginner/"></div>
+<div class="ds-thread" data-thread-key="2016/04/21/network/dns-hijeck/" data-title="DNS hijack DNS劫持" data-url="https://zgpeace.github.io/2016/04/21/network/dns-hijeck/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"sunhongtao"};
 (function() {
@@ -201,7 +185,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0、_Top_10_iOS_Conferences_in_2016"><span class="toc-number">1.</span> <span class="toc-text">0、 Top 10 iOS Conferences in 2016</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Start_Developing_iOS_Apps_(Swift)"><span class="toc-number">2.</span> <span class="toc-text">1、Start Developing iOS Apps (Swift)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Swift_print,_println,_NSLog"><span class="toc-number">3.</span> <span class="toc-text">2、Swift print, println, NSLog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1、The_as!_Operator"><span class="toc-number">4.</span> <span class="toc-text">3.1、The as! Operator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2_Type_Casting"><span class="toc-number">5.</span> <span class="toc-text">3.2 Type Casting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4_Swift_Guard_Statement"><span class="toc-number">6.</span> <span class="toc-text">4 Swift Guard Statement</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Google_DNS劫持背后的技术分析"><span class="toc-number">1.</span> <span class="toc-text">Google DNS劫持背后的技术分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扫盲_DNS_原理，兼谈“域名劫持”和“域名欺骗/域名污染”"><span class="toc-number">2.</span> <span class="toc-text">扫盲 DNS 原理，兼谈“域名劫持”和“域名欺骗/域名污染”</span></a></li></ol>
  
   </div>
 

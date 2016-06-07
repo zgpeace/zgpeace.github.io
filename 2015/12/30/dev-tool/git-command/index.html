@@ -4,32 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Xcode Build Settings中的Architecture概述 | zgpeace [易筋修行]</title>
+    <title>git-command | zgpeace [易筋修行]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zgpeace">
     
 
     
-    <meta name="description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
- 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
-
-查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
+    <meta name="description" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode Build Settings中的Architecture概述">
-<meta property="og:url" content="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/index.html">
+<meta property="og:title" content="git-command">
+<meta property="og:url" content="https://zgpeace.github.io/2015/12/30/dev-tool/git-command/index.html">
 <meta property="og:site_name" content="zgpeace [易筋修行]">
-<meta property="og:description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
- 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
-
-查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
-<meta property="og:updated_time" content="2015-10-26T12:11:30.000Z">
+<meta property="og:description" content="git">
+<meta property="og:image" content="https://zgpeace.github.io/img/git/gitCommandTransport.png">
+<meta property="og:updated_time" content="2015-12-30T07:40:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode Build Settings中的Architecture概述">
-<meta name="twitter:description" content="参考： 1、内容详尽：code的Architectures和Valid Architectures的区别,以及…  
- 2、补充查询静态库支持架构的命令：Xcode Build Settings中的Architecture概述
-
-查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：123ChenJohns-MacBook-Air:IOS JohnChe">
+<meta name="twitter:title" content="git-command">
+<meta name="twitter:description" content="git">
 
     
     <link rel="alternative" href="/atom.xml" title="zgpeace [易筋修行]" type="application/atom+xml">
@@ -89,14 +81,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/26/xcode-build-setting-architecture/" title="Xcode Build Settings中的Architecture概述" itemprop="url">Xcode Build Settings中的Architecture概述</a>
+      <a href="/2015/12/30/dev-tool/git-command/" title="git-command" itemprop="url">git-command</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-26T07:21:22.000Z" itemprop="datePublished"> 发表于 2015-10-26</time>
+    <time datetime="2015-12-30T07:00:40.000Z" itemprop="datePublished"> 发表于 2015-12-30</time>
     
   </p>
 </header>
@@ -105,19 +97,34 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考："><span class="toc-number">1.</span> <span class="toc-text">参考：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下："><span class="toc-number">1.1.</span> <span class="toc-text">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git_pull,_fetch,_rebase,_merge"><span class="toc-number">1.</span> <span class="toc-text">git pull, fetch, rebase, merge</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="参考：">参考：</h2><p> 1、内容详尽：<a href="http://my.oschina.net/shede333/blog/172785" target="_blank" rel="external">code的Architectures和Valid Architectures的区别,以及…</a>  </p>
-<p> 2、补充查询静态库支持架构的命令：<a href="http://blog.csdn.net/u012186949/article/details/41910361" target="_blank" rel="external">Xcode Build Settings中的Architecture概述
-</a></p>
-<h3 id="查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下：">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>IOS JohnChen$ cd <span class="regexp">/Users/</span>JohnChen<span class="regexp">/Library/</span>Developer<span class="regexp">/Xcode/</span>DerivedData<span class="regexp">/.../</span>Build<span class="regexp">/Products/</span>Debug-iphoneos</span><br><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>Debug-iphoneos JohnChen$ lipo -info libBuyBundle.a </span><br><span class="line">Architectures <span class="keyword">in</span> the fat <span class="string">file:</span> libBuyBundle.a <span class="string">are:</span> armv7 arm64</span><br></pre></td></tr></table></figure>
+		<h2 id="git_pull,_fetch,_rebase,_merge">git pull, fetch, rebase, merge</h2><p>The short and easy answer is that git pull is simply git fetch followed by git merge.</p>
+<p>It is very important to note that git pull will automatically merge whether you like it or not. This could, of course, result in merge conflicts. Let’s say your remote is origin and your branch is master. If you git diff origin/master before pulling, you should have some idea of potential merge conflicts and could prepare your local branch accordingly.</p>
+<p><img src="/img/git/gitCommandTransport.png" alt="git command transport">  </p>
+<p>Reference：<br><a href="http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch" target="_blank" rel="external">What are the differences between ‘git pull’ and ‘git fetch’?</a></p>
+<p><a href="http://blog.mikepearce.net/2010/05/18/the-difference-between-git-pull-git-fetch-and-git-clone-and-git-rebase/" target="_blank" rel="external">The difference between git pull, git fetch and git clone (and git rebase)</a></p>
+<p><a href="http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;" target="_blank" rel="external">GIT CHEATSHEET</a></p>
+<p><a href="http://www.ituring.com.cn/article/56870" target="_blank" rel="external">基于git的源代码管理模型——git flow</a></p>
+<p><a href="http://blog.jobbole.com/76867/" target="_blank" rel="external">Git工作流指南：Gitflow工作流</a></p>
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank" rel="external">Comparing Workflows</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/git/">git</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git/">git</a>
+  </div>
 
 </div>
 
@@ -125,7 +132,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/" data-title="Xcode Build Settings中的Architecture概述 | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
+	  <div data-url="https://zgpeace.github.io/2015/12/30/dev-tool/git-command/" data-title="git-command | zgpeace [易筋修行]" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -152,18 +159,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/11/06/pod-warning/" title="Cocoapods 0.35.0 运行pod时候，有很多警告，解决方案：删掉所有cocoapods，然后重装，可以解决">
+ <a href="/2016/01/01/self/Copenhagen-Berlin-Poland-2015/" title="Copenhagen-Berlin-Poland-2015">
   <strong>上一篇：</strong><br/>
   <span>
-  Cocoapods 0.35.0 运行pod时候，有很多警告，解决方案：删掉所有cocoapods，然后重装，可以解决</span>
+  Copenhagen-Berlin-Poland-2015</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/10/26/good-article/"  title="good article 好文推荐">
+<a href="/2015/12/17/book-list/"  title="Book-List">
  <strong>下一篇：</strong><br/> 
- <span>good article 好文推荐
+ <span>Book-List
 </span>
 </a>
 </div>
@@ -175,7 +182,7 @@
 
 
 <section id="comments" class="comment">
-<div class="ds-thread" data-thread-key="2015/10/26/xcode-build-setting-architecture/" data-title="Xcode Build Settings中的Architecture概述" data-url="https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/"></div>
+<div class="ds-thread" data-thread-key="2015/12/30/dev-tool/git-command/" data-title="git-command" data-url="https://zgpeace.github.io/2015/12/30/dev-tool/git-command/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"sunhongtao"};
 (function() {
@@ -196,7 +203,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考："><span class="toc-number">1.</span> <span class="toc-text">参考：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下："><span class="toc-number">1.1.</span> <span class="toc-text">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git_pull,_fetch,_rebase,_merge"><span class="toc-number">1.</span> <span class="toc-text">git pull, fetch, rebase, merge</span></a></li></ol>
  
   </div>
 
@@ -290,15 +297,11 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 			
 		
 			
-				<li><a href="/tags/cocoapods/" title="cocoapods">cocoapods<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Objc/" title="Objc">Objc<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Good-Article/" title="Good Article">Good Article<sup>1</sup></a></li>
+				<li><a href="/tags/cocoapods/" title="cocoapods">cocoapods<sup>2</sup></a></li>
 			
 		
 			
@@ -306,7 +309,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 			
 		
 			
-				<li><a href="/tags/device/" title="device">device<sup>1</sup></a></li>
+				<li><a href="/tags/Present-Modal-View/" title="Present Modal View">Present Modal View<sup>1</sup></a></li>
 			
 		
 			
@@ -314,15 +317,7 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 			
 		
 			
-				<li><a href="/tags/Present-Modal-View/" title="Present Modal View">Present Modal View<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac-clear-storage-Mac-purge-builds/" title="Mac, clear storage Mac, purge builds">Mac, clear storage Mac, purge builds<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/device/" title="device">device<sup>1</sup></a></li>
 			
 		
 			
@@ -334,11 +329,23 @@ var duoshuoQuery = {short_name:"sunhongtao"};
 			
 		
 			
-				<li><a href="/tags/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+				<li><a href="/tags/Good-Article/" title="Good Article">Good Article<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/travel/" title="travel">travel<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac-clear-storage-Mac-purge-builds/" title="Mac, clear storage Mac, purge builds">Mac, clear storage Mac, purge builds<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Swift/" title="Swift">Swift<sup>1</sup></a></li>
 			
 		
 		</ul>

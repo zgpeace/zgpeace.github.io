@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zgpeace.github.io/2016/06/07/network/network-tools/</loc>
+    <lastmod>2016-06-07T08:43:19.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zgpeace.github.io/2016/04/21/network/dns-hijeck/</loc>
     <lastmod>2016-04-21T07:38:52.000Z</lastmod>
   </url>
@@ -17,7 +22,7 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/12/02/github/</loc>
+    <loc>https://zgpeace.github.io/2015/12/02/dev-tool/github/</loc>
     <lastmod>2016-03-21T02:40:46.000Z</lastmod>
   </url>
   
@@ -32,27 +37,27 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/03/06/iphone5s-replace-camera/</loc>
+    <loc>https://zgpeace.github.io/2016/03/06/self/iphone5s-replace-camera/</loc>
     <lastmod>2016-03-06T13:08:10.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/01/08/fire-with-fire/</loc>
+    <loc>https://zgpeace.github.io/2016/01/08/self/fire-with-fire/</loc>
     <lastmod>2016-01-08T15:01:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/01/06/ios-interview/</loc>
+    <loc>https://zgpeace.github.io/2016/01/06/objc/ios-interview/</loc>
     <lastmod>2016-01-06T14:10:57.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/01/06/cocoapods/</loc>
+    <loc>https://zgpeace.github.io/2016/01/06/dev-tool/cocoapods/</loc>
     <lastmod>2016-01-06T14:06:50.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/11/06/pod-warning/</loc>
+    <loc>https://zgpeace.github.io/2015/11/06/dev-tool/pod-warning/</loc>
     <lastmod>2016-01-06T14:03:22.000Z</lastmod>
   </url>
   
@@ -62,7 +67,7 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/01/05/XX-Net-Agent/</loc>
+    <loc>https://zgpeace.github.io/2016/01/05/network/XX-Net-Agent/</loc>
     <lastmod>2016-01-05T15:01:27.000Z</lastmod>
   </url>
   
@@ -72,12 +77,12 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2016/01/01/Copenhagen-Berlin-Poland-2015/</loc>
+    <loc>https://zgpeace.github.io/2016/01/01/self/Copenhagen-Berlin-Poland-2015/</loc>
     <lastmod>2016-01-01T13:32:26.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/12/30/git-command/</loc>
+    <loc>https://zgpeace.github.io/2015/12/30/dev-tool/git-command/</loc>
     <lastmod>2015-12-30T07:40:15.000Z</lastmod>
   </url>
   
@@ -92,7 +97,7 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/10/25/hexo-basic/</loc>
+    <loc>https://zgpeace.github.io/2015/10/25/dev-tool/hexo-basic/</loc>
     <lastmod>2015-11-08T14:02:42.000Z</lastmod>
   </url>
   
@@ -107,7 +112,7 @@
   </url>
   
   <url>
-    <loc>https://zgpeace.github.io/2015/10/26/xcode-build-setting-architecture/</loc>
+    <loc>https://zgpeace.github.io/2015/10/26/dev-tool/xcode-build-setting-architecture/</loc>
     <lastmod>2015-10-26T12:11:30.000Z</lastmod>
   </url>
   

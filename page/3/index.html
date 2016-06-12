@@ -81,6 +81,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/10/26/dev-tool/xcode-build-setting-architecture/" title="Xcode Build Settings中的Architecture概述" itemprop="url">Xcode Build Settings中的Architecture概述</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-26T07:21:22.000Z" itemprop="datePublished"> 发表于 2015-10-26</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="参考：">参考：</h2><p> 1、内容详尽：<a href="http://my.oschina.net/shede333/blog/172785" target="_blank" rel="external">code的Architectures和Valid Architectures的区别,以及…</a>  </p>
+<p> 2、补充查询静态库支持架构的命令：<a href="http://blog.csdn.net/u012186949/article/details/41910361" target="_blank" rel="external">Xcode Build Settings中的Architecture概述
+</a></p>
+<h3 id="查看了静态库所支持的架构，_打开终端输入查看命令_lipo_－info_xxx-a，结果如下：">查看了静态库所支持的架构，  打开终端输入查看命令  lipo －info xxx.a，结果如下：</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>IOS JohnChen$ cd <span class="regexp">/Users/</span>JohnChen<span class="regexp">/Library/</span>Developer<span class="regexp">/Xcode/</span>DerivedData<span class="regexp">/.../</span>Build<span class="regexp">/Products/</span>Debug-iphoneos</span><br><span class="line">ChenJohns-MacBook-<span class="string">Air:</span>Debug-iphoneos JohnChen$ lipo -info libBuyBundle.a </span><br><span class="line">Architectures <span class="keyword">in</span> the fat <span class="string">file:</span> libBuyBundle.a <span class="string">are:</span> armv7 arm64</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  -->
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/10/26/good-article/" title="good article 好文推荐" itemprop="url">good article 好文推荐</a>
   </h1>
   <p class="article-author">By
@@ -359,6 +425,10 @@ Engine *engine;
 		  
 		
 		  
+			<li><a href="/categories/dev-tool/" title="dev-tool">dev-tool<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/device/" title="device">device<sup>1</sup></a></li>
 		  
 		
@@ -420,6 +490,10 @@ Engine *engine;
 			
 		
 			
+				<li><a href="/tags/network/" title="network">network<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/film/" title="film">film<sup>1</sup></a></li>
 			
 		
@@ -429,6 +503,10 @@ Engine *engine;
 		
 			
 				<li><a href="/tags/Good-Article/" title="Good Article">Good Article<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/dev-tool/" title="dev-tool">dev-tool<sup>1</sup></a></li>
 			
 		
 			
@@ -445,10 +523,6 @@ Engine *engine;
 		
 			
 				<li><a href="/tags/Swift/" title="Swift">Swift<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/network/" title="network">network<sup>1</sup></a></li>
 			
 		
 		</ul>

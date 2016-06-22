@@ -81,6 +81,98 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/22/objc/Memory-Management-Program/" title="Memory-Management-Program" itemprop="url">Memory-Management-Program</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-22T01:44:59.000Z" itemprop="datePublished"> 发表于 2016-06-22</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ul>
+<li><p>Summery: Assign is for primitive values like BOOL, NSInteger or double. For objects use retain or copy, depending on if you want to keep a reference to the original object or make a copy of it. </p>
+</li>
+<li><p>.assign: In your setter method for the property, there is a simpe assignment of your instance variable to the new value.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="keyword">void</span>)setString: (NSString *)newString&#123;     </span><br><span class="line">	<span class="built_in">string</span> = newString;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>.retain: this retains the new value in your setter method. For example: This is safer, since you explicitly state that you want to maintain a reference of object, and you must release it before it will be deallocated.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">void</span>)setString:(NSString *)newString&#123;  </span><br><span class="line">	[newString retain];    </span><br><span class="line">	[<span class="built_in">string</span> release];  </span><br><span class="line">	<span class="built_in">string</span> = newString;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>.copy: this makes a copy of the string in your setter method: This is often used with strings, since making a copy of the original object ensures that it is not changed whilst you are using it.</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(void)setString:(NSString *)newString&#123;  </span><br><span class="line">	<span class="keyword">if</span>(<span class="type">string</span> != newString) &#123;  </span><br><span class="line">		[<span class="type">string</span> release];  </span><br><span class="line">		<span class="type">string</span> = [newString <span class="keyword">copy</span>];  </span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>.weak: use weak references to avoid retain cycles<br><img src="http://ww3.sinaimg.cn/large/700b0431gw1f53rvhs04oj20iq0pgjsz.jpg" alt="An illustration of cyclical references"></p>
+</li>
+</ul>
+<p>Reference:  </p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/4510913/objective-c-assign-copy-retain" target="_blank" rel="external">objective-c-assign-copy-retain</a>  </li>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html" target="_blank" rel="external">Practical Memory Management</a></li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/objc/">objc</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/objc/">objc</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  -->
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/21/objc/iOS-AOP/" title="iOS-AOP" itemprop="url">iOS-AOP</a>
   </h1>
   <p class="article-author">By
@@ -769,81 +861,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/06/objc/ios-interview/" title="ios招聘题库" itemprop="url">ios招聘题库</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="zgpeace" target="_blank" itemprop="author">zgpeace</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-06T14:07:59.000Z" itemprop="datePublished"> 发表于 2016-01-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>有问题，有答案的推荐：<br><a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">iOSInterviewQuestions</a></p>
-<p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">招聘一个靠谱的 iOS</a></p>
-<p><a href="http://www.atatech.org/articles/47153?p=1#comments" target="_blank" rel="external">如何招聘一个优秀的iOS的开发？</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/ios/">ios</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ios/">ios</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-
- <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <!--
-  <span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-  </span>
-  <span id="busuanzi_container_site_uv">
-    本站访客数<span id="busuanzi_value_site_uv"></span>人次
-  </span>
-  -->
-  <span id="busuanzi_container_page_pv">
-    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-  </span>
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -933,7 +950,7 @@
 		  
 		
 		  
-			<li><a href="/categories/objc/" title="objc">objc<sup>1</sup></a></li>
+			<li><a href="/categories/objc/" title="objc">objc<sup>2</sup></a></li>
 		  
 		
 		  
@@ -979,6 +996,10 @@
 		
 			
 				<li><a href="/tags/device/" title="device">device<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/objc/" title="objc">objc<sup>1</sup></a></li>
 			
 		
 			
